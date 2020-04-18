@@ -25,11 +25,11 @@ function add_button_click(){
     dizi_soyisimler[öğr_sayaç]=öğrsoyisim.value;
     dizi_öğrnot[öğr_sayaç]=öğrnot.value;
 
-    öğr_sayaç++;
          if(öğrnot.value<101){
              console.log("good moment");
              
            
+    öğr_sayaç++;
            
          
                 document.getElementById("sayaç_label").innerHTML=öğr_sayaç.toString()+" öğrenci eklendi";
