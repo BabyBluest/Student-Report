@@ -16,7 +16,7 @@
      var isimler=JSON.parse(localStorage.getItem('hafıza_isimler'));
     var soyisimler=JSON.parse(localStorage.getItem('hafıza_soyisimler'));
     var notlar=JSON.parse(localStorage.getItem('hafıza_not'));
-   alert(notlar);
+   
 window.onload = function () {
 
 // Construct options first and then pass it as a parameter
@@ -33,17 +33,17 @@ var options1 = {
 		showInLegend: true,
 		dataPoints: [
             
-			{ label:isimler[0],y:parseInt(notlar[0])},//index0
-			{ label:isimler[1], y:parseInt(notlar[1])},//1
-			{ label:isimler[2], y: parseInt(notlar[2]) },//2
-			{ label:isimler[3], y: parseInt(notlar[3]) },//3
-			{ label:isimler[4],y: parseInt(notlar[4]) },//4
-			{ label:isimler[5], y: parseInt(notlar[5])},//5
-			{ label:isimler[6], y: parseInt(notlar[6]) },//6
-			{ label:isimler[7], y: parseInt(notlar[7]) },//7
-            { label:isimler[8],y: parseInt(notlar[8]) },//8
-            {label:isimler[9] ,y:parseInt(notlar[9])},//9
-            {label:isimler[10], y:parseInt(notlar[10])}//10
+			{ label:isimler[0]+" "+soyisimler[0],y:parseInt(notlar[0])},//index0
+			{ label:isimler[1]+" "+soyisimler[1], y:parseInt(notlar[1])},//1
+			{ label:isimler[2] +" "+soyisimler[2] , y: parseInt(notlar[2]) },//2
+			{ label:isimler[3] +" "+soyisimler[3] , y: parseInt(notlar[3]) },//3
+			{ label:isimler[4]+" "+soyisimler[4] ,y: parseInt(notlar[4]) },//4
+			{ label:isimler[5] +" "+soyisimler[5] , y: parseInt(notlar[5])},//5
+			{ label:isimler[6] +" "+soyisimler[6], y: parseInt(notlar[6]) },//6
+			{ label:isimler[7] +" "+soyisimler[7], y: parseInt(notlar[7]) },//7
+            { label:isimler[8] +" "+soyisimler[8],y: parseInt(notlar[8]) },//8
+            {label:isimler[9] +" "+soyisimler[9] ,y:parseInt(notlar[9])},//9
+            {label:isimler[10] +" "+soyisimler[10] , y:parseInt(notlar[10])}//10
 			]
 		}]
 };
