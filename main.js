@@ -6,7 +6,7 @@ app.controller("ctrl", function ($scope) {
     //Bir ürün listesi oluşturuyoruz.
     $scope.products = [
 
-        { id: 0, name: "yavşakhüso", price: 20 },
+        { id: 0, name: "saat", price: 20 },
         { id: 1, name: "Kemer", price: 15 },
         { id: 2, name: "Kol Düğmesi", price: 3 },
         { id: 3, name: "Gömlek", price: 50 },
