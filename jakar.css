@@ -245,3 +245,37 @@ position:absolute;
 
 
 }
+@media only screen and (min-width: 768px) {
+
+
+	.harita{
+		position:absolute;
+				
+				
+				margin-right:0%;
+			
+				width: 100%;
+				margin-top: 5%;
+			}
+	iframe{
+		position: absolute;
+		margin-bottom: 100%;
+		
+		width: 60%;
+		
+		margin: 6px 0;
+	
+	}
+	.adres{
+		font-size: 100%;
+	
+		margin-left: 10%;
+	  }
+
+	  .nav{
+		
+		font-size: 100%;
+					 
+		   }
+
+}
