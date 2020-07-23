@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <title>raporla</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--sidebar css link-->
+<link rel="stylesheet" href="https://fatihisilgan.github.io/mycss/style.css">
+<link href="https://canvasjs.com/assets/css/jquery-ui.1.11.2.min.css" rel="stylesheet" />
+<script>
+    
+     var isimler=JSON.parse(localStorage.getItem('hafıza_isimler'));
+    var soyisimler=JSON.parse(localStorage.getItem('hafıza_soyisimler'));
+    var notlar=JSON.parse(localStorage.getItem('hafıza_not'));
+   
+window.onload = function () {
+
+// Construct options first and then pass it as a parameter
+
+var options1 = {
+    
+	animationEnabled: true,
+	title: {
+		text: "Chart inside a jQuery Resizable Element"
+	},
+	data: [{
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[0]+" "+soyisimler[0],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+			{   x:1,y:parseInt(notlar[0])},//index0
+		
+			]
+    },{
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[1]+" "+soyisimler[1],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+			{ x:2, y:parseInt(notlar[1])},//1
+
+			]
+    },
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[2]+" "+soyisimler[2],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+    { x:3, y: parseInt(notlar[2]) },//2
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[3]+" "+soyisimler[3],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+		 { x:4, y: parseInt(notlar[3]) },//3
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[4]+" "+soyisimler[4],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+    { x:5 ,y: parseInt(notlar[4]) },//4
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[5]+" "+soyisimler[5],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+    { x:6,  y: parseInt(notlar[5])},//5
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[6]+" "+soyisimler[6],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+		{ x:7,  y: parseInt(notlar[6]) },//6
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[7]+" "+soyisimler[7],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+		{ x:8,  y: parseInt(notlar[7]) },//7
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[8]+" "+soyisimler[8],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+    {  x:9, y: parseInt(notlar[8]) },//8
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+  
+    legendText:isimler[9]+" "+soyisimler[9],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+      { x:10,y:parseInt(notlar[9])},//9
+
+			]
+    }
+    ,
+    {
+    type: "column", //change it to line, area, bar, pie, etc
+   
+    
+    legendText:isimler[10]+" "+soyisimler[10],
+    
+		showInLegend: true,
+		dataPoints: [
+            
+		
+		{ x:11, y:parseInt(notlar[10])}//10
+
+			]
+    }
+  ]
+    
+};
+
+$("#resizable").resizable({
+	create: function (event, ui) {
+		//Create chart.
+		$("#chartContainer1").CanvasJSChart(options1);
+	},
+	resize: function (event, ui) {
+		//Update chart size according to its container size.
+		$("#chartContainer1").CanvasJSChart().render();
+	}
+});
+
+}
+</script>
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="sidebar_close()">Close &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">öğrenci ekle</a>
+  <a href="rapor.html" class="w3-bar-item w3-button">raporla</a>
+  <a onclick="hazırlayan_click()" href="#" class="w3-bar-item w3-button">hazırlayan</a>
+
+
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="sidebar_open()">&#9776;</button>
+  <div id="pagehead" class="w3-container">
+    <h1>Rapor sayfası</h1>
+  </div>
+</div>
+
+
+</div>
+<div id="resizable" style="height: 370px;border:1px solid gray;">
+	<div id="chartContainer1" style="height: 100%; width: 100%;"></div>
+</div>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery-ui.1.11.2.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+<script>
+   
+
+
+
+  sidebar_close();
+function sidebar_open() {//sidbar açıl
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function sidebar_close() {//side bar kapan
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+function hazırlayan_click(){
+  alert("Fatih IŞILGAN ");
+  
+}
+
+
+</script>
+
+</body>
+</html>
